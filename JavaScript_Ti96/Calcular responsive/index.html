@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMC GN</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(to right, rgb(29, 136, 207), rgb(110, 25, 143));
+            text-align: center;
+            color: #fff;
+        }
+        .corpo{
+    display: flex;
+    flex-direction: column;
+    width: 74%;
+    margin: auto;
+            
+        }
+        img{
+            margin: 0 auto;
+            width: 100%;
+        }
+        
+        h1{
+            text-align: center;
+        }
+        .conteudo{
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            
+        }
+        .line1{
+        
+            padding-top: 20px;
+            padding-bottom: 20px;
+            display: flex;
+            justify-content: space-around;
+        }
+        
+        .line1 .nome{
+            width:600px;
+        }
+        
+        button{
+            background-color: slateblue;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 1px 1px 6px black;
+            cursor: pointer;
+        }
+        
+        .form-control{
+        
+            margin-right: 15px;
+            margin-left: 15px;
+        }
+            
+    </style >
+</head>
+<body>
+    <div class="corpo">
+            <h1 class="h1">Calculando o IMC</h1>
+            <fieldset class="conteudo">
+                <div class="line1 input-group">
+                    <input type="text" placeholder="Nome" id="nome" name="nome" class="form-control nome">
+                    <input type="date" name="data" id="data" class="form-control data">
+                </div>
+     
+                <div class="line1 input-group" >
+                    <input type="text" placeholder="Altura" name="altura" id="altura" class="form-control altura">
+                    <input type="text" placeholder="Peso" name="peso" class="form-control peso" id="peso">
+                    <button class="btn btn-primary" id="calcular">Calcular</button>
+                </div>
+     
+            </fieldset>
+     
+            <table  class="table">
+                <thead>
+                    <tr>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Idade</th>
+                    <th scope="col">Altura</th>
+                    <th scope="col">Peso</th>
+                    <th scope="col">IMC</th>
+                    <th scope="col">Situação</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+    </div>
+     
+    <script>
+        var t_fieldNome=document.querySelector("#nome");
+        var t_fielddata=document.querySelector("#data");
+        var t_fieldaltura=document.querySelector("#altura");
+        var t_fieldopeso=document.querySelector("#peso");
+
+        var btnCalcular=document.querySelector("#calcular");
+
+        function somar(n1,n2) 
+
+        {
+            return n1+n2;
+        }
+
+        // console.log(somar(23,45))
+
+        // Quando eu clicar no botão ele vai  somar os valores e vai imprimir no console.log
+
+        // Estou pedindo para add um evento de clique no botão
+        btnCalcular.addEventListener("click", function somar(e){
+
+            console.log(`Nome: ${t_fieldNome.value} peso: ${t_fieldopeso.value} Altura: ${t_fieldaltura.value} Data Nascimento: ${t_fielddata.value}`)
+
+        })    
+
+    </script>
+     
+    </body>
+</html>
