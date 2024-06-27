@@ -1,2 +1,2 @@
 # EstudoTeste
-Estudo voltados a JavaScript
+Estudo voltados ao JavaScript
